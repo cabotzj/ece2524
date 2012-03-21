@@ -1,0 +1,1 @@
+This module is intended to create a function for the grade_change.py file we utilized in the midterm.  I would like to use modularity in this function because we can then utilize it in other assignments( if i use it in my final project).
