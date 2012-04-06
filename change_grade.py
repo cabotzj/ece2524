@@ -1,25 +1,19 @@
 #!/usr/bin/env python
 
 import re
-import fileinput
-import string
-from sys import stderr,stdout,argv,exit
+from sys import stderr,stdout,argv
 
-def grad_change1(data, name, grade)
+def grade_change(data, name, grade):
+	toReturn = list()
 	for line in data:
-		m = re.search (name, line)
-		if m:
-			print re.sub ('[%s]' % string.digits, grade, line)
-	return (data)
-
-
-
-from sys import stdin, stdout, stderr, argv
+		app = line
+		if re.search (name, line):
+			app = re.sub ('[0-9]+', grade, line)
+		toReturn.append(line)
+	return toReturn
 
 if __name__=='__main__':
 	from sys import stdin, stdout, stderr, argv
-
-	(data) = grade_change1(stdin, argv[1], argv[2])
-
-
-
+	data = grade_change(stdin, argv[1], argv[2])
+	for line in data:
+		print line

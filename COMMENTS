@@ -1,0 +1,5 @@
+You had some redundant imports and an unneccessary import of exit.
+
+Also, you were replacing all the digits with the grade, not just the number itself (so you would get double replacements).
+
+To make it more in line with the UNIX philosophy, I changed the code so that it will put the restul in a list and return that list. This way you do not always print out hte data, you can do w/e you want with it.
